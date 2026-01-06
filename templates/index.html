@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <h2>Settings</h2>
+            <div class="input-group">
+                <label for="userId">User ID</label>
+                <input type="text" id="userId" placeholder="Enter your ID..." value="user123">
+            </div>
+            
+            <div class="upload-box">
+                <label for="fileInput" class="file-label">Choose Document</label>
+                <input type="file" id="fileInput" accept=".pdf,.docx,.txt">
+                <button id="uploadBtn" onclick="uploadFile()">Upload & Index</button>
+            </div>
+            <div id="uploadStatus" class="status-text"></div>
+        </aside>
+
+        <main class="chat-area">
+            <header class="chat-header">
+                <h3>Chat with your Data</h3>
+            </header>
+            
+            <div class="chat-window" id="chatWindow">
+                <div class="msg bot-msg">Hello! Upload a document and ask me anything about it.</div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="userMessage" placeholder="Type your question..." onkeypress="handleKeyPress(event)">
+                <button id="sendBtn" onclick="sendMessage()">Send</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
