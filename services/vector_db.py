@@ -7,7 +7,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 chroma_key = os.getenv("chroma_key")
 chroma_tenant = os.getenv("tenant")
 
-jina_key = os.getenv('jina_kay')
+jina_key = os.getenv('jina_key')
 
 
 cloud_client = chromadb.CloudClient(

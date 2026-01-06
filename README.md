@@ -23,7 +23,7 @@ A high-performance **Retrieval-Augmented Generation (RAG)** system that allows u
 
 ## 📁 Project Structure
 ```text
-/rag-project
+/retrival_augmentation_-_generation
 ├── app.py                 # Flask entry point & API routes
 ├── services/
 │   ├── vector_db.py       # Chroma & Jina configuration
