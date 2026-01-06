@@ -2,7 +2,7 @@ import redis
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from .vector_db import vector_store
+from vector_db import vector_store
 import os
 
 HOST = os.getenv("HOST")

@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify , render_template
 from flask_cors import CORS
 import os, uuid
-from .services.vector_db import splitter, vector_store 
-from .services.file_handling import get_loader
-from .services.LLM import get_chat_response 
+from services.vector_db import splitter, vector_store 
+from services.file_handling import get_loader
+from services.LLM import get_chat_response 
 
 app = Flask(__name__)
 
